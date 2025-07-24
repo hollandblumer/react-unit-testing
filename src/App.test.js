@@ -1,9 +1,8 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import App from "./App";
+import { getSum } from "./App";
 
-test("increments count when button is clicked", () => {
-  render(<App />);
-  const button = screen.getByRole("button", { name: /count is/i });
-  fireEvent.click(button);
-  expect(button).toHaveTextContent("count is 1");
+test("adds two numbers correctly", () => {
+  expect(getSum(2, 3)).toBe(5);
+  expect(getSum(-1, 1)).toBe(0);
 });
+
+test("", () => {});
